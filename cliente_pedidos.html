@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="img/favicon/android-icon-192x192.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon/favicon-32x32.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="img/favicon/favicon-96x96.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon/favicon-16x16.png"
+        >
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <title>Pet Online :: Área do cliente :: Pedidos</title>
+    </head>
+    <body>
+        <div class="d-flex flex-column wrapper">
+        <div id="menu"></div>
+
+        <main class="flex-fill">
+            <div class="container">
+                <h1>Minha Conta</h1>
+                <div class="row gx-3">
+                    <div class="col-4">
+                        <div class="list-group">
+                            <a href="cliente_dados.html" class="list-group-item list-group-item-action">
+                                <i class="bi-person fs-6"></i> Dados Pessoais
+                            </a>
+                            <a href="cliente_contatos.html" class="list-group-item list-group-item-action">
+                                <i class="bi-mailbox fs-6"></i> Contatos
+                            </a>
+                            <a href="cliente_endereco.html" class="list-group-item list-group-item-action">
+                                <i class="bi-house-door fs-6"></i> Endereço
+                            </a>
+                            <a href="cliente_pedidos.html" class="list-group-item list-group-item-action bg-danger text-light">
+                                <i class="bi-truck fs-6"></i> Pedidos
+                            </a>
+                            <a href="cliente_favoritos.html" class="list-group-item list-group-item-action">
+                                <i class="bi-heart fs-6"></i> Favoritos
+                            </a>
+                            <a href="cliente_senha.html" class="list-group-item list-group-item-action">
+                                <i class="bi-lock fs-6"></i> Alterar Senha
+                            </a>
+                            <a href="index.html" class="list-group-item list-group-item-action">
+                                <i class="bi-door-open fs-6"></i> Sair
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <form class="row mb-3">
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select">
+                                        <option value="30">Últimos 30 dias</option>
+                                        <option value="60">Últimos 60 dias</option>
+                                        <option value="90">Últimos 90 dias</option>
+                                        <option value="180">Últimos 180 dias</option>
+                                        <option value="360" selected>Últimos 360 dias</option>
+                                        <option value="9999">Todo o período</option>
+                                    </select>
+                                    <label>Período</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select">
+                                        <option value="1" selected>Mais novos primeiro</option>
+                                        <option value="2">Mais antigos primeiro</option>
+                                    </select>
+                                    <label>Ordenação</label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="accordion" id="divPedidos">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pedido000010">
+                                        <b>Pedido 008732</b>
+                                        <span class="mx-1">(realizado em 11/03/2022)</span>
+                                    </button>
+                                </h2>
+                                <div id="pedido000010" class="accordion-collapse collapse" data-bs-parent="#divPedidos">
+                                    <div class="accordion-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th class="text-end">R$ Unit.</th>
+                                                    <th class="text-center">Qtde.</th>
+                                                    <th class="text-end">Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Ração Royal</td>
+                                                    <td class="text-end">99,00</td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">99,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Petisco dental</td>
+                                                    <td class="text-end">19,90</td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">19,90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Controlador de odores</td>
+                                                    <td class="text-end">19,50</td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">19,50</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor dos Produtos:</th>
+                                                    <td class="text-end">138,40</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor do Frete:</th>
+                                                    <td class="text-end">9,90</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor a Pagar:</th>
+                                                    <td class="text-end">148,30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Forma de Pagamento:</th>
+                                                    <td class="text-end">Crédito VISA 2x</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pedido000009">
+                                        <b>Pedido 009543</b>
+                                        <span class="mx-1">(realizado em 15/01/2022)</span>
+                                    </button>
+                                </h2>
+                                <div id="pedido000009" class="accordion-collapse collapse" data-bs-parent="#divPedidos">
+                                    <div class="accordion-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th class="text-end">R$ Unit.</th>
+                                                    <th class="text-center">Qtde.</th>
+                                                    <th class="text-end">Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Ração Royal</td>
+                                                    <td class="text-end">99,00</td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">99,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brinquedo Macaco</td>
+                                                    <td class="text-end">39,90</td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">39,90</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor dos Produtos:</th>
+                                                    <td class="text-end">138,90</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor do Frete:</th>
+                                                    <td class="text-end">9,90</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Valor a Pagar:</th>
+                                                    <td class="text-end">148,80</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-end" colspan="3">Forma de Pagamento:</th>
+                                                    <td class="text-end">Crédito VISA 2x</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="footer"></div>  
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" type="text/javascript"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/fateclib.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
